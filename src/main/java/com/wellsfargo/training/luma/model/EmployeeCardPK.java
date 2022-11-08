@@ -10,6 +10,7 @@ import javax.persistence.Table;
 @Table(name="employee_card_details")
 public class EmployeeCardPK implements Serializable {
 	
+
 	/**
 	 * 
 	 */
@@ -23,6 +24,12 @@ public class EmployeeCardPK implements Serializable {
 	@JoinColumn(name = "loan_id")
 	private LoanCard loanCard;
 	
+	
+	public EmployeeCardPK(Employee employee, LoanCard loanCard) {
+		super();
+		this.employee = employee;
+		this.loanCard = loanCard;
+	}
 	
 	
 	//---------- Getters and Setters

@@ -21,10 +21,14 @@ public class ItemDetails implements DAO<Item> {
 		return Optional.empty();
 	}
 
+	public Item findByDescription(String description) {
+		return itemRepo.findDistinctByItemDescription(description);
+	}
+	
 	@Override
 	public List<Item> getAll() {
 		// TODO Auto-generated method stub
-		return null;
+		return itemRepo.findAll();
 	}
 
 	@Override

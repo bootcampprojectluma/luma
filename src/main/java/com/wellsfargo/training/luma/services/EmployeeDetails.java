@@ -17,31 +17,26 @@ public class EmployeeDetails implements DAO<Employee> {
 
 	@Override
 	public Optional<Employee> get(String id) {
-		// TODO Auto-generated method stub
-		return Optional.empty();
+		return employeeRepo.findById(id);
 	}
 
 	@Override
 	public List<Employee> getAll() {
-		
 		return employeeRepo.findAll();
 	}
 
 	@Override
 	public void save(Employee t) {
-		// TODO Auto-generated method stub
-		
+		employeeRepo.save(t);
 	}
 
 	@Override
 	public void update(Employee t, String[] params) {
-		// TODO Auto-generated method stub
-		
+				
 	}
 
 	@Override
 	public void delete(Employee t) {
-		// TODO Auto-generated method stub
 		
 	}
 

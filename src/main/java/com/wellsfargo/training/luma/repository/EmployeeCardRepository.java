@@ -9,5 +9,4 @@ import com.wellsfargo.training.luma.model.EmployeeCardPK;
 @Repository
 public interface EmployeeCardRepository extends JpaRepository<EmployeeCard, EmployeeCardPK>{
 	
-	
 }

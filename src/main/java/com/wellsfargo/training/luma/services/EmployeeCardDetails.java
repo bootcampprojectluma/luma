@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.wellsfargo.training.luma.model.EmployeeCard;
+import com.wellsfargo.training.luma.model.EmployeeCardPK;
 import com.wellsfargo.training.luma.repository.EmployeeCardRepository;
 
 @Service
@@ -14,11 +15,16 @@ public class EmployeeCardDetails implements DAO<EmployeeCard> {
 	
 	@Autowired
 	private EmployeeCardRepository employeeCardRepo;
+	
 
 	@Override
 	public Optional<EmployeeCard> get(String id) {
 		// TODO Auto-generated method stub
 		return Optional.empty();
+	}
+	
+	public Optional<EmployeeCard> get(EmployeeCardPK employeeCardPK) {
+		return Optional.ofNullable(employeeCardRepo.getReferenceById(employeeCardPK));
 	}
 
 	@Override

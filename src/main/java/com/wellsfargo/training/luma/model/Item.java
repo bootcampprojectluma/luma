@@ -13,7 +13,7 @@ public class Item {
 	@Column(name="item_id", length=6)
 	private String itemId;
 	
-	@Column(name="item_description", length=25)
+	@Column(name="item_description", length=25,unique=true)
 	private String itemDescription;
 	
 	@Column(name="issue_status")

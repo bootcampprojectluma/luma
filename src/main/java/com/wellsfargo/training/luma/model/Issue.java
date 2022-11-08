@@ -9,6 +9,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
+
 @Entity
 @Table(name="employee_issue_details")
 public class Issue {
@@ -33,6 +34,18 @@ public class Issue {
 	@Column(name="return_date")
 	private Date returnDate;
 	
+	
+	public Issue() {};
+	
+	
+	public Issue(String issueId, Employee employee, Item item, Date issueDate, Date returnDate) {
+		this.issueId = issueId;
+		this.employee = employee;
+		this.item = item;
+		this.issueDate = issueDate;
+		this.returnDate = returnDate;
+	}
+
 	//---------- Getters and Setters
 
 	public String getIssueId() {
@@ -74,5 +87,8 @@ public class Issue {
 	public void setReturnDate(Date returnDate) {
 		this.returnDate = returnDate;
 	}
+
+
+	
 	
 }

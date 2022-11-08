@@ -8,5 +8,5 @@ import com.wellsfargo.training.luma.model.Item;
 @Repository
 public interface ItemRepository extends JpaRepository<Item, String>{
 	
-	
+	public Item findDistinctByItemDescription(String itemDescription);
 }

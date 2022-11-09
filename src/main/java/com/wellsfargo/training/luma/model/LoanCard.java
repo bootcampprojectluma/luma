@@ -13,8 +13,8 @@ public class LoanCard {
 	@Column(name="loan_id",length=6)
 	private String loanId;
 	
-	@Column(name="load_type",length=15)
-	private String loadType;
+	@Column(name="loan_type",length=15)
+	private String loanType;
 	
 	@Column(name="duration_in_years")
 	private int durationInYears;
@@ -29,12 +29,12 @@ public class LoanCard {
 		this.loanId = loanId;
 	}
 
-	public String getLoadType() {
-		return loadType;
+	public String getLoanType() {
+		return loanType;
 	}
 
-	public void setLoadType(String loadType) {
-		this.loadType = loadType;
+	public void setLoanType(String loanType) {
+		this.loanType = loanType;
 	}
 
 	public int getDurationInYears() {

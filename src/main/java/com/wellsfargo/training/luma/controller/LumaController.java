@@ -97,7 +97,7 @@ public class LumaController {
 			EmployeeCardPK compositeKey = new EmployeeCardPK(employee, loanCard);
 			EmployeeCard employeeCard = employeeCardDetails.get(compositeKey).get();
 			resp.put("loanId",loanCard.getLoanId());
-			resp.put("loadType",loanCard.getLoadType());
+			resp.put("loanType",loanCard.getLoanType());
 			resp.put("durationInYears",loanCard.getDurationInYears());
 			resp.put("card_issue_date", employeeCard.getCardIssueDate());
 			

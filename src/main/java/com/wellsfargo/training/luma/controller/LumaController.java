@@ -54,6 +54,12 @@ public class LumaController {
 		}
 
 	}
+	
+	@GetMapping("/loan_apply")
+	@ResponseBody
+	public List<Item> getItems(){
+		return itemDetails.getAll();
+	}
 
 	@PostMapping("/loan_apply")
 	public ApiResponse loanApply( @RequestBody Map<String, String> request) {

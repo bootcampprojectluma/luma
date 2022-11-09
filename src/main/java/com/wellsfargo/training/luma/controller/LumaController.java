@@ -35,7 +35,7 @@ public class LumaController {
 
 	@Autowired private LoanCardDetails loanCardDetails;
 	
-
+	@CrossOrigin(origins = "http://localhost:3000")
 	@PostMapping("/login")	
 	@ResponseBody
 	public Object login( @RequestBody Employee empRequest) {
@@ -55,12 +55,14 @@ public class LumaController {
 
 	}
 	
+	@CrossOrigin(origins = "http://localhost:3000")
 	@GetMapping("/loan_apply")
 	@ResponseBody
 	public List<Item> getItems(){
 		return itemDetails.getAll();
 	}
-
+	
+	@CrossOrigin(origins = "http://localhost:3000")
 	@PostMapping("/loan_apply")
 	public ApiResponse loanApply( @RequestBody Map<String, String> request) {
 		
@@ -80,7 +82,8 @@ public class LumaController {
 		}
 		
 	}
-
+	
+	@CrossOrigin(origins = "http://localhost:3000")
 	@PostMapping("/view_cards")
 	@ResponseBody
 	public List<Map<String,Object>> viewCards(@RequestBody Employee empRequest) {
@@ -104,6 +107,7 @@ public class LumaController {
 
 	}
 	
+	@CrossOrigin(origins = "http://localhost:3000")
 	@PostMapping("/view_purchases")
 	@ResponseBody
 	public List<Map<String,Object>> viewPurchases(@RequestBody Employee empRequest) {
